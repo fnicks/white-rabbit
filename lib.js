@@ -47,6 +47,17 @@ class WhiteRabbit {
       );
     });
   }
+
+  async getData(service, method) {
+    const setSendMethod= `${send}|${method}`
+    const setReceiveService= `${receive}|${service}`
+    this.send(service, setSendMethod);
+    return this.receive(setReceiveService);
+  }
+
+  async listen(service) {
+    
+  }
 }
 
 export { WhiteRabbit };
